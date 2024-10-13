@@ -1,6 +1,12 @@
-name: build-nginx-1-24
+name: Build & Push - collabpl/magento-nginx:1.24
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    push:
+      branches:
+        - main
+  release:
+    types: [published]
 
 jobs:
   nginx-1-24:
