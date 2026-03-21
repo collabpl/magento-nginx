@@ -42,7 +42,7 @@ docker pull gitlab-registry.collab.pl/collab/docker/magento-nginx:1.24
 ```yaml
 services:
   nginx:
-    image: collabpl/magento-nginx:1.24
+    image: gitlab-registry.collab.pl/collab/docker/magento-nginx:1.24
     ports:
       - "80:80"
     volumes:
