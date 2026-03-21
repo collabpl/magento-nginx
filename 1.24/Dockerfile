@@ -5,7 +5,7 @@ ARG MAGENTO_ROOT=/var/www/html
 
 RUN addgroup -g "$APP_ID" www \
  && adduser -G www -u "$APP_ID" -h /var/www -s /bin/bash -S www
-RUN touch /var/run/nginx.pid
+RUN mkdir -p /var/run && touch /var/run/nginx.pid
 RUN mkdir /sock
 
 RUN mkdir -p ${MAGENTO_ROOT} \
